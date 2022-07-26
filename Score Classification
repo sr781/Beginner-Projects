@@ -1,0 +1,35 @@
+student_scores = { 
+  "Harry": 81,
+  "Ron": 78,
+  "Hermione": 99, 
+  "Draco": 74,
+  "Neville": 62,
+}
+
+
+.
+student_grades = {}
+
+#Scores 91 - 100: Grade = "Outstanding"
+
+#Scores 81 - 90: Grade = "Exceeds Expectations"
+
+#Scores 71 - 80: Grade = "Acceptable"
+
+#Scores 70 or lower: Grade = "Fail"
+
+for name in student_scores:
+  score = student_scores[name]
+  if (score <= 70):
+    student_grades[name] = "Fail"
+  elif ((score > 70) and (score <= 80)):
+    student_grades[name] = "Acceptable"
+  elif ((score > 80) and (score <= 90)):
+    student_grades[name] = "Exceeds Expectations"
+  elif ((score > 90) and (score <= 100)):
+    student_grades[name] = "Outstanding"
+  
+    
+
+
+print(student_grades)
