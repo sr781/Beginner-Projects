@@ -31,6 +31,21 @@ resources = { #How much resources the coffee machine has
     "coffee": 100,
 }
 
+ascii_art = [
+'''
+      )  (
+     (   ) )
+      ) ( (
+    _______)_
+ .-'---------|  
+( C|/\/\/\/\/|
+ '-./\/\/\/\/|
+   '_________'
+    '-------'
+''',
+
+]
+
 not_empty = True
 
 def coin_counter():  # A function that asks the user how many coins they have added
@@ -46,6 +61,7 @@ item = ["water", "milk", "coffee"]
 while not_empty:
   
   check = True
+  
   ask = input("What would you like to drink (espresso/latte/cappuccino)? Or would you like a report?: \n") # Prompts the user to enter a drink they want or of they would like to see what resources the machine has left
   enough = True
   if ask == "report": #This for loop goes through the "resources" dictionary and prints the resources
@@ -67,6 +83,7 @@ while not_empty:
         change = money - cost
         change = round(change, 2)
         print(f"Your change is £{change} \n") #Returns change to the user after calculation
+        print(ascii_art[0])
         print("Here is your espresso! Enjoy \n")
 
       else:
@@ -92,6 +109,7 @@ while not_empty:
         change = money - cost
         change = round(change, 2)
         print(f"Your change is £{change} \n")
+        print(ascii_art[0])
         print("Here is your latte! Enjoy \n")
 
       else:
@@ -117,6 +135,7 @@ while not_empty:
         change = money - cost
         change = round(change, 2)
         print(f"Your change is £{change} \n")
+        print(ascii_art[0])
         print("Here is your cappuccino! Enjoy \n")
 
       else:
@@ -130,5 +149,3 @@ while not_empty:
   else:
     print("Power off")
     not_empty = False
-  
-  
